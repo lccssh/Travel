@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'HomeIcons',
   data () {
     return {
       iconList: [{
@@ -49,10 +50,6 @@ export default {
         id: '0008',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/90/59a2f523ee2f9202.png',
         desc: '西递宏村'
-      }, {
-        id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-        desc: '黄山'
       }]
     }
   },
@@ -76,6 +73,9 @@ export default {
   .icons >>> .swiper-container {
     height: 0;
     padding-bottom: 50%;
+  }
+  .icons {
+    margin-top: .1rem;
   }
   .icons .icon {
     position: relative;
