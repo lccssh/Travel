@@ -8,14 +8,17 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市<span class="iconfont down-icon">&#xe628;</span>
+      北京<span class="iconfont down-icon">&#xe628;</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -45,6 +48,7 @@ export default {
     margin-left: .2rem;
     margin-right: .2rem;
     color: #ccc;
+    font-size: .26rem;
     line-height: .64rem;
   }
   .header .header-input .search-icon {
@@ -53,6 +57,7 @@ export default {
   .header .header-right {
     width: 1.04rem;
     float: right;
+    font-size: .28rem;
   }
   .header .header-right .down-icon {
     font-size: .24rem;
