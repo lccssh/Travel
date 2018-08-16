@@ -6,6 +6,7 @@ import router from './router'
 import iView from 'iview'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'swiper/dist/css/swiper.css'
 import 'styles/iconfont.css'
 import 'styles/border.css'
@@ -21,6 +22,7 @@ Vue.use(iView)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
