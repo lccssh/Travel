@@ -1,25 +1,46 @@
 <template>
-  <div class="banner">
-    <div class="banner-img-wrapper">
-      <img class="banner-img-content" src="//img1.qunarzz.com/sight/p0/1607/a5/a50187e22a0c3fac0.water.jpg_600x330_141d6098.jpg" />
-      <div class="banner-info">
-        <div class="banner-title">合肥万达文化旅游城</div>
-        <div class="banner-number"><span class="iconfont img-icon">&#xe655;</span>3</div>
-      </div>
-      <div class="banner-back">
-        <div class="back-bg">
-          <router-link to="/">
-            <span class="iconfont back-icon">&#xe624;</span>
-          </router-link>
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <div class="banner-img-wrapper">
+        <img class="banner-img-content" src="//img1.qunarzz.com/sight/p0/1607/a5/a50187e22a0c3fac0.water.jpg_600x330_141d6098.jpg" />
+        <div class="banner-info">
+          <div class="banner-title">合肥万达文化旅游城</div>
+          <div class="banner-number"><span class="iconfont img-icon">&#xe655;</span>3</div>
+        </div>
+        <div class="banner-back">
+          <div class="back-bg">
+            <router-link to="/">
+              <span class="iconfont back-icon">&#xe624;</span>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
+    <common-gallary v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
 <script>
+import CommonGallary from 'common/gallary/Gallary'
+
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  data () {
+    return {
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  },
+  components: {
+    CommonGallary
+  }
 }
 </script>
 
