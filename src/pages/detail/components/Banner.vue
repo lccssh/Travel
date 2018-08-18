@@ -7,13 +7,6 @@
           <div class="banner-title">合肥万达文化旅游城</div>
           <div class="banner-number"><span class="iconfont img-icon">&#xe655;</span>3</div>
         </div>
-        <div class="banner-back">
-          <div class="back-bg">
-            <router-link to="/">
-              <span class="iconfont back-icon">&#xe624;</span>
-            </router-link>
-          </div>
-        </div>
       </div>
     </div>
     <common-gallary v-show="showGallary" @close="handleGallaryClose"></common-gallary>
@@ -87,24 +80,5 @@ export default {
     display: inline-block;
     font-size: .2rem;
     padding-right: .12rem;
-  }
-  .banner .banner-back {
-    position: absolute;
-    left: .1rem;
-    top: .1rem;
-  }
-  .banner .banner-back .back-bg {
-    background: rgba(0,0,0,.5);
-    width: .72rem;
-    height: .72rem;
-    border-radius: 50%;
-    color: #fff;
-    font-size: .44rem;
-    font-weight: bolder;
-    text-align: center;
-    vertical-align: middle;
-  }
-  .banner .banner-back .back-bg .back-icon {
-    color: #fff;
   }
 </style>

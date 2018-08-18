@@ -27,7 +27,7 @@ export default {
   .header .back-icon {
     position: absolute;
     left: .15rem;
-    font-size: .32rem;
+    font-size: .4rem;
     color: #fff;
   }
 </style>
