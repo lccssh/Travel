@@ -2,17 +2,11 @@
   <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOptions">
-        <swiper-slide>
-          <img class="swiper-img" src="http://img1.qunarzz.com/sight/p0/1706/b3/b3bbc6bb89a2c944a3.img.jpg_r_800x800_4d1c0ea8.jpg" />
+        <swiper-slide v-for="(item, index) of gallaryImgs" :key="index">
+          <img class="swiper-img" :src="item" />
         </swiper-slide>
-        <swiper-slide>
-          <img class="swiper-img" src="http://img1.qunarzz.com/sight/p0/1706/2a/2a00027a55b61b34a3.img.jpg_r_800x800_e67b25b4.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-          <img class="swiper-img" src="http://img1.qunarzz.com/sight/p0/1706/ad/ad5810fb51f7ed2aa3.img.jpg_r_800x800_e465d53e.jpg" />
-        </swiper-slide>
-      </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
     </div>
   </div>
 </template>
@@ -29,6 +23,9 @@ export default {
         observer: true
       }
     }
+  },
+  props: {
+    gallaryImgs: Array
   },
   methods: {
     handleGallaryClick () {
@@ -61,7 +58,6 @@ export default {
   }
   .container .wrapper .swiper-pagination {
     color: #fff;
-    bottom: .6rem;
     font-size: .24rem;
   }
 </style>

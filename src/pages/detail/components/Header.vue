@@ -43,6 +43,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -78,6 +81,7 @@ export default {
     color: #fff;
     background: #00bcd4;
     font-size: .32rem;
+    z-index: 2;
   }
   .header-fixed .fixed-back-icon {
     position: absolute;
